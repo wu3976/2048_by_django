@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{msg_title}}
+{% endblock %}
+
+{% block body%}
+<p class="text">{{msg_body}}</p>
+<form action="{% url 'mainPage' %}">
+    <input type="submit" class="button" value="Return to game">
+</form>
+{% endblock %}

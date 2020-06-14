@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Log in
+{%endblock%}
+{%block body%}
+<p class="header" id="header_login">
+    Log in
+</p>
+<div id="control">
+<form action="{% url 'login_check' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><input type="submit" value="Log in" class="button" id="login_submit"></p>
+</form>
+<form action="{% url 'signup' %}" method="get">
+    <p><span class="text">Needs an account? </span>
+        <br><input type="submit" class="button" value="Sign up"></p>
+</form>
+</div>
+<script>
+
+</script>
+{%endblock%}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+Message
+{% endblock %}
+
+{% block body %}
+<p class="text">You have already logged in as : {{name}}</p>
+<form action="{% url 'logout' %}" method="get">
+    <p><input type="submit" class="button" value="Logout"></p>
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%}
+index
+{%endblock%}
+
+{%block body%}
+<h1 class="header" id="header_1">Game-2048</h1>
+<p class="text" id="text_1">Take part into this epic game!</p>
+<div class="grid-container">
+    <div class = "grid-item" id = "0_0"></div>
+    <div class = "grid-item" id = "0_1"></div>
+    <div class = "grid-item" id = "0_2"></div>
+    <div class = "grid-item" id = "0_3"></div>
+    <div class = "grid-item" id = "1_0"></div>
+    <div class = "grid-item" id = "1_1"></div>
+    <div class = "grid-item" id = "1_2"></div>
+    <div class = "grid-item" id = "1_3"></div>
+    <div class = "grid-item" id = "2_0"></div>
+    <div class = "grid-item" id = "2_1"></div>
+    <div class = "grid-item" id = "2_2"></div>
+    <div class = "grid-item" id = "2_3"></div>
+    <div class = "grid-item" id = "3_0"></div>
+    <div class = "grid-item" id = "3_1"></div>
+    <div class = "grid-item" id = "3_2"></div>
+    <div class = "grid-item" id = "3_3"></div>
+</div>
+<br>
+
+<form method="get" action="{% url 'login' %}">
+    <p><input type="submit" value="Login" class="button"></p>
+</form>
+<form method="get" action="{% url 'signup' %}">
+    <p><input type="submit" value="Sign up" class="button"></p>
+</form>
+<form method="get" action="{% url 'logout' %}">
+    <p><input type="submit" value="Logout" class="button"></p>
+</form>
+<script src="{% static 'game_logic.js' %}"></script>
+
+{%endblock%}
